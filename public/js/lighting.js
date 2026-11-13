@@ -221,7 +221,7 @@
     }
     return Math.min(steps, low) / steps;
   }
-  const STYLES = [['banded', 'Game: bands, dithered seams'], ['hard', 'Hard bands'], ['dither', 'Ordered dither (4x4)'], ['checker', 'Checker dither (2x2)'], ['noise', 'Noise dither'], ['smooth', 'Smooth']];
+  const STYLES = [['banded', 'Banded: bands, dithered seams'], ['hard', 'Hard bands'], ['dither', 'Ordered dither (4x4)'], ['checker', 'Checker dither (2x2)'], ['noise', 'Noise dither'], ['smooth', 'Smooth']];
 
   class Layer {
     constructor(w, h, fill) { this.w = w; this.h = h; this.p = new Float32Array(w * h * 3).fill(fill); }

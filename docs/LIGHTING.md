@@ -79,7 +79,7 @@ left alone when the mood changes. A mood switch is one undo step.
 To check a room in every mood without opening the editor:
 
 ```sh
-node tools/render_moods.mjs Art/DeadPixel/Rooms/Kitchen.deadpixel out/ --scale 2
+node tools/render_moods.mjs converted/Rooms/Kitchen.deadpixel out/ --scale 2
 ```
 
 ## Render styles

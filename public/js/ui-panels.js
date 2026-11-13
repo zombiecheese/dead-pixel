@@ -453,7 +453,7 @@
     if (!L.style) L.style = L.smooth ? 'smooth' : 'banded';
     const kvS = h('div', { class: 'kv' });
     kvS.append(h('label', { for: 'lpStyle' }, 'Style'), sel('lpStyle', DP.Lighting.STYLES, L.style, (v) => { L.style = v; changed(); }, 'How light levels land on the pixels. Banded is the default.'), h('span'));
-    kvS.append(...range('lpSteps', 'Light steps', L.steps || 5, 2, 16, 1, (v) => (L.steps = v), (v) => (v === 5 ? '5 (game)' : v)));
+    kvS.append(...range('lpSteps', 'Light steps', L.steps || 5, 2, 16, 1, (v) => (L.steps = v), (v) => (v === 5 ? '5 (default)' : v)));
     p.append(kvS);
     if (L.preset === 'Architecture') {
       const P = L.planes;

@@ -5,6 +5,9 @@
 A pixel art editor that runs in the browser, made for 2D games built in Unity, including point-and-click adventures
 made with PowerQuest. It paints, animates and lights sprites, and exports straight into Unity (and Unreal).
 
+**Try it live: [deadpixel.zombiecheese.com](http://deadpixel.zombiecheese.com/)**. Nothing to install, and nothing you
+make is uploaded.
+
 Your work never leaves your computer: projects save as `.deadpixel` files and every export downloads through the
 browser. The server (or Docker container) only hands out the app's files and refuses anything but `GET`.
 
@@ -12,6 +15,7 @@ browser. The server (or Docker container) only hands out the app's files and ref
 
 | Doc | For |
 | --- | --- |
+| [Wiki](https://github.com/zombiecheese/dead-pixel/wiki) | Every tool, menu and panel explained, page by page |
 | [User guide](docs/GUIDE.md) | Artists: every tool, panel and export, recipes and troubleshooting |
 | [Lighting](docs/LIGHTING.md) | How Dead Pixel's lighting works, render styles, light map exports |
 | [Deploying](docs/DEPLOY.md) | Docker, other ways to run it, why nothing is stored on the server |
@@ -24,6 +28,7 @@ browser. The server (or Docker container) only hands out the app's files and ref
 
 | How | Command | Then open |
 | --- | --- | --- |
+| Live demo | | http://deadpixel.zombiecheese.com/ |
 | Docker, prebuilt | `docker run -d -p 8080:8080 --read-only --tmpfs /var/cache/nginx --tmpfs /var/run --tmpfs /tmp ghcr.io/zombiecheese/dead-pixel:latest` | http://localhost:8080 |
 | Docker | `docker compose up -d` | http://localhost:8080 |
 | Docker, by hand | `docker build -t deadpixel . && docker run -p 8080:8080 --read-only --tmpfs /var/cache/nginx --tmpfs /var/run --tmpfs /tmp deadpixel` | http://localhost:8080 |
