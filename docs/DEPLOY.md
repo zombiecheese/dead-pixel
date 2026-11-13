@@ -3,7 +3,24 @@
 Dead Pixel is a static web app: HTML, CSS and JavaScript with no server code. Host it with Docker,
 or open it straight from disk.
 
-## Docker (recommended)
+## Prebuilt image
+
+Every release is published to GitHub Container Registry for `linux/amd64` and `linux/arm64`:
+
+```sh
+docker run -d --name deadpixel -p 8080:8080 \
+  --read-only --tmpfs /var/cache/nginx --tmpfs /var/run --tmpfs /tmp \
+  --restart unless-stopped ghcr.io/zombiecheese/dead-pixel:latest
+```
+
+Tags: `latest`, the full version (`1.0.0`), and `1.0` and `1` that follow the newest release in that line. Pin a full
+version in production. To use it with Compose, replace `build: .` in `docker-compose.yml` with
+`image: ghcr.io/zombiecheese/dead-pixel:1.0.0`.
+
+The image is built by `.github/workflows/container.yml` when a release is published (or by hand from the Actions tab
+for any tag). Its build stage runs the tests, so a failing release never publishes.
+
+## Docker, built from source (recommended for changes)
 
 ```sh
 docker compose up -d          # builds the image, serves on http://localhost:8080

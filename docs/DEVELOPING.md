@@ -24,7 +24,7 @@ public/
     ui-menus.js       menus and every UI.action (dialogs, import, export)
 unity/Editor/         the Unity importer (AssetPostprocessor)
 docs/                 GUIDE, LIGHTING, DEPLOY, FORMAT, ROADMAP, this file
-.github/workflows/     CI: npm test and the single-file build on every PR
+.github/workflows/     CI: npm test and the single-file build on every PR; container.yml publishes the image
 samples/              sample projects + GIFs (tools/make_samples.mjs)
 tests/run.mjs         node tests for everything that isn't UI
 tools/                build.mjs, make_samples.mjs, make_icons.py, import_unity.mjs, render_moods.mjs
