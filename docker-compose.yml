@@ -1,0 +1,13 @@
+# docker compose up -d   then open http://localhost:8080 (set DEADPIXEL_PORT in .env to change the port; see .env.example)
+services:
+  deadpixel:
+    build: .
+    image: deadpixel:latest
+    ports:
+      - "${DEADPIXEL_PORT:-8080}:8080"
+    read_only: true            # the app never writes on the server
+    tmpfs:
+      - /var/cache/nginx
+      - /var/run
+      - /tmp
+    restart: unless-stopped

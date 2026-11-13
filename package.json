@@ -1,0 +1,14 @@
+{
+  "name": "deadpixel",
+  "version": "0.2.0",
+  "private": true,
+  "license": "GPL-3.0-or-later",
+  "description": "Dead Pixel: a browser pixel art editor for 2D games (layers, timeline, onion skin, indexed colour, 2D lighting, Unity/Unreal sprite sheets).",
+  "scripts": {
+    "build": "node tools/build.mjs",
+    "single": "node tools/build.mjs --single",
+    "test": "node tests/run.mjs",
+    "samples": "node tools/make_samples.mjs",
+    "serve": "python3 -m http.server 8080 --directory public"
+  }
+}

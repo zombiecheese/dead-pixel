@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dead Pixel</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@400;500;600&family=Silkscreen&display=swap">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<div id="app">
+  <header class="bar">
+    <div class="brand" title="Dead Pixel"><img class="brand-logo" src="icons/logo.svg" alt="" width="24" height="24">Dead Pixel</div>
+    <nav id="menus" class="menus" aria-label="Menus"></nav>
+    <div class="docinfo" id="docinfo"></div>
+  </header>
+
+  <main class="work">
+    <aside class="toolbox" id="toolbox" aria-label="Tools"></aside>
+
+    <section class="stage">
+      <div class="optbar" id="optbar"></div>
+      <div class="viewport" id="viewport">
+        <canvas id="view"></canvas>
+        <div class="zoomctl">
+          <button id="zoomOut" title="Zoom out (-)">−</button>
+          <span id="zoomLabel">800%</span>
+          <button id="zoomIn" title="Zoom in (+)">+</button>
+          <button id="zoomFit" title="Fit (Shift+0)">Fit</button>
+        </div>
+      </div>
+      <div class="statusbar" id="statusbar"><span id="stPos">–</span><span id="stCol"></span><span id="stMsg"></span></div>
+    </section>
+
+    <aside class="panels">
+      <div class="tabs" role="tablist" id="panelTabs">
+        <button role="tab" data-tab="colour" aria-selected="true">Colour</button>
+        <button role="tab" data-tab="palette">Palette</button>
+        <button role="tab" data-tab="light">Light</button>
+        <button role="tab" data-tab="brushes">Brushes</button>
+        <button role="tab" data-tab="history">History</button>
+      </div>
+      <div class="tabpanes">
+        <section class="pane" data-pane="colour" id="paneColour"></section>
+        <section class="pane" data-pane="palette" id="panePalette" hidden></section>
+        <section class="pane" data-pane="light" id="paneLight" hidden></section>
+        <section class="pane" data-pane="brushes" id="paneBrushes" hidden></section>
+        <section class="pane" data-pane="history" id="paneHistory" hidden></section>
+      </div>
+    </aside>
+  </main>
+
+  <section class="timeline" id="timeline" aria-label="Timeline">
+    <div class="tl-bar" id="tlBar"></div>
+    <div class="tl-scroll" id="tlScroll"><div class="tl-grid" id="tlGrid"></div></div>
+  </section>
+</div>
+
+<div class="float" id="preview" hidden>
+  <div class="float-head" id="previewHead"><span>Preview</span>
+    <select id="pvZoom" aria-label="Preview size"><option value="1">1x</option><option value="2">2x</option><option value="3" selected>3x</option><option value="4">4x</option><option value="6">6x</option><option value="8">8x</option></select>
+    <select id="pvTag" aria-label="Loop"></select>
+    <label class="chk"><input type="checkbox" id="pvLit"> Lit</label>
+    <select id="pvBg" aria-label="Background"><option value="checker">Checks</option><option value="#000000">Black</option><option value="#ffffff">White</option><option value="#3a3346">Night</option></select>
+    <button id="pvPlay" title="Play / pause">❚❚</button>
+    <button id="pvClose" title="Close">×</button>
+  </div>
+  <div class="float-body"><canvas id="pvCanvas"></canvas></div>
+</div>
+
+<div class="modal-back" id="modalBack" hidden><div class="modal" role="dialog" aria-modal="true" id="modal"></div></div>
+<div class="toast" id="toast" role="status" hidden></div>
+
+<script src="js/palettes-game.js"></script>
+<script src="js/lighting.js"></script>
+<script src="js/core.js"></script>
+<script src="js/tools.js"></script>
+<script src="js/transform.js"></script>
+<script src="js/io.js"></script>
+<script src="js/samples.js"></script>
+<script src="js/unity-script.js"></script>
+<script src="js/app.js"></script>
+<script src="js/ui-panels.js"></script>
+<script src="js/ui-timeline.js"></script>
+<script src="js/ui-menus.js"></script>
+</body>
+</html>
