@@ -12,7 +12,7 @@ Last updated 2026-11-13.
 | v1.0.0 | 2026-11-13 | The first public release: everything under Delivered below. |
 
 To cut a release: bump `version` in `package.json` and `DP.VERSION` in `public/js/core.js`, add a row here, merge,
-then tag `main` as `vX.Y.Z`.
+then publish a GitHub release tagged `vX.Y.Z` on `main`. Publishing it builds and pushes the container image.
 
 ## Delivered
 
@@ -32,6 +32,7 @@ Verified in Chromium (desktop, iPad and iPhone emulation); 29 node tests pass (`
 | PowerQuest round trip: converted files record each cel's source sprite; Frames for PowerQuest writes sprites back under their original names, size and place (checked pixel-identical in node) | v1.0.0 |
 | Room import clips to the room bounds, keeping scenery wider than the room; `--no-clip` to opt out | v1.0.0 |
 | CI: GitHub Actions runs `npm test` and the single-file build | v1.0.0 |
+| Container image on GitHub Container Registry for every release (amd64 and arm64) | v1.0.0 |
 | QoL: save in place and Save as, Open recent, unsaved-changes warning, History tab, reference image, off-palette highlight, Outline, Trim canvas, Mirror tag, rebindable shortcuts | v1.0.0 |
 | Room moods: converted rooms open with their mood profile's lamps, art glows, times of day, alternate world and story moods (Light > Room mood); `tools/render_moods.mjs` renders a room in each | v1.0.0 |
 

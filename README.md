@@ -24,6 +24,7 @@ browser. The server (or Docker container) only hands out the app's files and ref
 
 | How | Command | Then open |
 | --- | --- | --- |
+| Docker, prebuilt | `docker run -d -p 8080:8080 --read-only --tmpfs /var/cache/nginx --tmpfs /var/run --tmpfs /tmp ghcr.io/zombiecheese/dead-pixel:latest` | http://localhost:8080 |
 | Docker | `docker compose up -d` | http://localhost:8080 |
 | Docker, by hand | `docker build -t deadpixel . && docker run -p 8080:8080 --read-only --tmpfs /var/cache/nginx --tmpfs /var/run --tmpfs /tmp deadpixel` | http://localhost:8080 |
 | No install | open `public/index.html` in a browser | |
