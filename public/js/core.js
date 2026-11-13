@@ -3,7 +3,7 @@
 (function (root) {
   'use strict';
   const DP = root.DP || (root.DP = {});
-  DP.VERSION = '0.2.0'; // keep in step with package.json and the release tag (docs/ROADMAP.md)
+  DP.VERSION = '1.0.0'; // keep in step with package.json and the release tag (docs/ROADMAP.md)
 
   // ---------------------------------------------------------------- colour
   const clamp = (v, a, b) => (v < a ? a : v > b ? b : v);

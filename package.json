@@ -1,6 +1,6 @@
 {
   "name": "deadpixel",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "private": true,
   "license": "GPL-3.0-or-later",
   "description": "Dead Pixel: a browser pixel art editor for 2D games (layers, timeline, onion skin, indexed colour, 2D lighting, Unity/Unreal sprite sheets).",

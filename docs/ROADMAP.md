@@ -9,7 +9,7 @@ Last updated 2026-11-13.
 
 | Version | Date | What's in it |
 | --- | --- | --- |
-| v0.2.0 | 2026-11-13 | The first public release: everything under Delivered below. |
+| v1.0.0 | 2026-11-13 | The first public release: everything under Delivered below. |
 
 To cut a release: bump `version` in `package.json` and `DP.VERSION` in `public/js/core.js`, add a row here, merge,
 then tag `main` as `vX.Y.Z`.
@@ -20,20 +20,20 @@ Verified in Chromium (desktop, iPad and iPhone emulation); 29 node tests pass (`
 
 | Item | Release |
 | --- | --- |
-| Editor: timeline, layers/groups, blend modes, linked cels, onion skin, tags, preview window | v0.2.0 |
-| Drawing: pixel perfect, shading ink, dither inks, custom brushes, tiled mode, symmetry, RotSprite | v0.2.0 |
-| Colour: RGB and indexed, palette tools, colour wheel, tints/shades/tones, ramps, gradient maps | v0.2.0 |
-| Lighting preview and render, light map export | v0.2.0 |
-| Exports: .deadpixel, PNG, GIF, Unity/Unreal sheets, PowerQuest frames | v0.2.0 |
-| Samples (File > Samples) and docs | v0.2.0 |
-| Pens, tablets and phones: pressure, eraser end, gestures, touch layout | v0.2.0 |
-| `tools/import_unity.mjs`: a Unity / PowerQuest project's characters, rooms and other sprite folders as `.deadpixel` | v0.2.0 |
-| Undo capped by memory (256 MB default, View > Preferences) | v0.2.0 |
-| PowerQuest round trip: converted files record each cel's source sprite; Frames for PowerQuest writes sprites back under their original names, size and place (checked pixel-identical in node) | v0.2.0 |
-| Room import clips to the room bounds, keeping scenery wider than the room; `--no-clip` to opt out | v0.2.0 |
-| CI: GitHub Actions runs `npm test` and the single-file build | v0.2.0 |
-| QoL: save in place and Save as, Open recent, unsaved-changes warning, History tab, reference image, off-palette highlight, Outline, Trim canvas, Mirror tag, rebindable shortcuts | v0.2.0 |
-| Room moods: converted rooms open with their mood profile's lamps, art glows, times of day, alternate world and story moods (Light > Room mood); `tools/render_moods.mjs` renders a room in each | v0.2.0 |
+| Editor: timeline, layers/groups, blend modes, linked cels, onion skin, tags, preview window | v1.0.0 |
+| Drawing: pixel perfect, shading ink, dither inks, custom brushes, tiled mode, symmetry, RotSprite | v1.0.0 |
+| Colour: RGB and indexed, palette tools, colour wheel, tints/shades/tones, ramps, gradient maps | v1.0.0 |
+| Lighting preview and render, light map export | v1.0.0 |
+| Exports: .deadpixel, PNG, GIF, Unity/Unreal sheets, PowerQuest frames | v1.0.0 |
+| Samples (File > Samples) and docs | v1.0.0 |
+| Pens, tablets and phones: pressure, eraser end, gestures, touch layout | v1.0.0 |
+| `tools/import_unity.mjs`: a Unity / PowerQuest project's characters, rooms and other sprite folders as `.deadpixel` | v1.0.0 |
+| Undo capped by memory (256 MB default, View > Preferences) | v1.0.0 |
+| PowerQuest round trip: converted files record each cel's source sprite; Frames for PowerQuest writes sprites back under their original names, size and place (checked pixel-identical in node) | v1.0.0 |
+| Room import clips to the room bounds, keeping scenery wider than the room; `--no-clip` to opt out | v1.0.0 |
+| CI: GitHub Actions runs `npm test` and the single-file build | v1.0.0 |
+| QoL: save in place and Save as, Open recent, unsaved-changes warning, History tab, reference image, off-palette highlight, Outline, Trim canvas, Mirror tag, rebindable shortcuts | v1.0.0 |
+| Room moods: converted rooms open with their mood profile's lamps, art glows, times of day, alternate world and story moods (Light > Room mood); `tools/render_moods.mjs` renders a room in each | v1.0.0 |
 
 ## In progress
 
