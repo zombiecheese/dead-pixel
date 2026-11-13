@@ -236,7 +236,7 @@
   };
   /**
    * The files for "Frames for PowerQuest": [{name, frame, rect:{x,y,w,h}, hide:Set}] (name without .png).
-   * A plain drawing gives <Tag>_<n> per frame, as before. An imported file (cels carrying their game sprite, see
+   * A plain drawing gives <Tag>_<n> per frame, as before. An imported file (cels carrying their source sprite, see
    * doc.sources) gives one file per sprite under its original name, at its original size and place, so it can be
    * dropped back over the original and keep its .meta (and every .anim that points at it). Other imported sprites
    * on the frame are left out (a room's other props); layers you added are included. Frames you drew new get the

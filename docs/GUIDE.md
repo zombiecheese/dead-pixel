@@ -262,7 +262,7 @@ PowerQuest export.
 
 **Edit > Rotate / scale (RotSprite)** turns and resizes pixel art without blurring it. It scales up with Scale2x
 three times, rotates, then samples back down, so lines stay clean. It works on the selection, the cel, or every
-frame of the layer. Angle, scale X and Y, and the pivot are all adjustable.
+frame of the layer. Set the angle (-360° to 360°) and the scale (0.1 to 8).
 
 Also available:
 

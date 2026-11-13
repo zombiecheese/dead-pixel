@@ -203,7 +203,7 @@
       app.setDoc(d); UI.toast('Imported ' + d.frames.length + ' frames');
     },
     async exportPNG() {
-      const ok = await UI.modal('Export this frame', (b) => { const f = h('div', { class: 'form' }); f.append(...field('Scale', selIn('epS', ['1', '2', '3', '4', '6', '8'], '1')), ...field('Lit (game lighting)', chkIn('epLit', false)), ...field('Indexed PNG when possible', chkIn('epIdx', app.doc.mode === 'indexed'))); b.append(f); }, [{ label: 'Cancel', value: false }, { label: 'Save PNG', value: true, primary: true }]);
+      const ok = await UI.modal('Export this frame', (b) => { const f = h('div', { class: 'form' }); f.append(...field('Scale', selIn('epS', ['1', '2', '3', '4', '6', '8'], '1')), ...field('Lit', chkIn('epLit', false)), ...field('Indexed PNG when possible', chkIn('epIdx', app.doc.mode === 'indexed'))); b.append(f); }, [{ label: 'Cancel', value: false }, { label: 'Save PNG', value: true, primary: true }]);
       if (!ok) return;
       const d = app.doc, k = +val('epS'), rgba = val('epLit') ? app.displayed(app.frame, 'lit', 0) : app.composite(app.frame);
       await saveBytes(await pngFor(scaled(rgba, d.w, d.h, k), d.w * k, d.h * k, val('epIdx') && k >= 1), base() + '_' + app.frame + '.png', 'image/png');
@@ -263,7 +263,7 @@
     },
     async exportGIF() {
       const d = app.doc;
-      const ok = await UI.modal('Animated GIF', (b) => { const f = h('div', { class: 'form' }); f.append(...field('Frames', selIn('egTag', [['-1', 'All frames']].concat(d.tags.map((t, i) => [String(i), 'Tag: ' + t.name])), d.tags.length ? '0' : '-1')), ...field('Scale', selIn('egS', ['1', '2', '3', '4', '6', '8'], '4')), ...field('Lit (game lighting)', chkIn('egLit', app.light.preview))); b.append(f); }, [{ label: 'Cancel', value: false }, { label: 'Save GIF', value: true, primary: true }]);
+      const ok = await UI.modal('Animated GIF', (b) => { const f = h('div', { class: 'form' }); f.append(...field('Frames', selIn('egTag', [['-1', 'All frames']].concat(d.tags.map((t, i) => [String(i), 'Tag: ' + t.name])), d.tags.length ? '0' : '-1')), ...field('Scale', selIn('egS', ['1', '2', '3', '4', '6', '8'], '4')), ...field('Lit', chkIn('egLit', app.light.preview))); b.append(f); }, [{ label: 'Cancel', value: false }, { label: 'Save GIF', value: true, primary: true }]);
       if (!ok) return;
       const tag = +val('egTag'), t = d.tags[tag];
       let list = IO.framesFor(d, tag);

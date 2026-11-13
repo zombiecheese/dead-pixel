@@ -26,6 +26,7 @@ unity/Editor/         the Unity importer (AssetPostprocessor)
 docs/                 GUIDE, LIGHTING, DEPLOY, FORMAT, ROADMAP, this file
 .github/workflows/     CI: npm test and the single-file build on every PR; container.yml publishes the image
 samples/              sample projects + GIFs (tools/make_samples.mjs)
+wiki/                 the GitHub wiki's source; .github/workflows/wiki.yml publishes it from main
 tests/run.mjs         node tests for everything that isn't UI
 tools/                build.mjs, make_samples.mjs, make_icons.py, import_unity.mjs, render_moods.mjs
 ```
@@ -108,6 +109,6 @@ These are the project's ground rules; keep them.
   lighting tests passing.
 - **Art.** The art style is dither-free; only the engine lighting dithers. Defaults never dither art (indexed
   conversion, gradients).
-- **Docs.** Keep the README and `docs/` current when features change, and move items in [ROADMAP.md](ROADMAP.md)
+- **Docs.** Keep the README, `docs/` and `wiki/` current when features change, and move items in [ROADMAP.md](ROADMAP.md)
   in the same PR.
 - **Name.** "Dead Pixel". The logo is a pixelated zombie head showing its brain (`tools/make_icons.py`).

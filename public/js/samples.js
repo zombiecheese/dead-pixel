@@ -345,7 +345,7 @@
 
   S.LIST = [
     ['walk', 'Walk cycle (indexed, groups, tags, onion skin)'],
-    ['room', 'Lit room 320×180 (game lighting, RotSprite fan, TV static)'],
+    ['room', 'Lit room 320×180 (lighting, RotSprite fan, TV static)'],
     ['portal', 'Portal pulse (FX loop, linked cels, glow)'],
     ['tile', 'Brick tile (tiled mode, dither, brush)'],
   ];

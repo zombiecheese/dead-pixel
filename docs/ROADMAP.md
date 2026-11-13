@@ -33,6 +33,7 @@ Verified in Chromium (desktop, iPad and iPhone emulation); 29 node tests pass (`
 | Room import clips to the room bounds, keeping scenery wider than the room; `--no-clip` to opt out | v1.0.0 |
 | CI: GitHub Actions runs `npm test` and the single-file build | v1.0.0 |
 | Container image on GitHub Container Registry for every release (amd64 and arm64) | v1.0.0 |
+| Wiki: a page for every part of the app, published from `wiki/` by a workflow; live demo link in the README | next release |
 | QoL: save in place and Save as, Open recent, unsaved-changes warning, History tab, reference image, off-palette highlight, Outline, Trim canvas, Mirror tag, rebindable shortcuts | v1.0.0 |
 | Room moods: converted rooms open with their mood profile's lamps, art glows, times of day, alternate world and story moods (Light > Room mood); `tools/render_moods.mjs` renders a room in each | v1.0.0 |
 
